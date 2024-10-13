@@ -42,6 +42,7 @@ class AppTheme {
     primary: LightAppColors.primaryColor,
     primaryContainer: LightAppColors.whiteColor,
     onSecondary: Colors.black,
+    secondaryContainer: Color.fromARGB(228, 233, 221, 221),
 
     // onPrimaryContainer: lightAppColors.blackColor,
     background: LightAppColors.backGround,
