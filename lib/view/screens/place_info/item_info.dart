@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/buttons.dart';
+import 'package:restate/core/constants/colors.dart';
 import 'package:restate/core/constants/images.dart';
 import 'package:restate/core/constants/text_styles.dart';
 import 'package:restate/core/functions/dimenesions.dart';
@@ -148,6 +149,7 @@ class PlaceInfo extends StatelessWidget {
                       SizedBox(
                         height: 10.h,
                       ),
+
                       Row(
                         children: [
                           SizedBox(width: 5.w),
@@ -162,21 +164,25 @@ class PlaceInfo extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
+                        height: 5.h,
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(width: 5.w),
+                          Icon(
+                            Icons.done_rounded,
+                            size: 20.sp,
+                            color: LightAppColors.greenColor,
+                          ),
+                          SizedBox(width: 5.w),
+                          Text("active for sell",
+                              style: TextStyles.w40013green(context))
+                        ],
+                      ),
+                      SizedBox(
                         height: 15.h,
                       ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //   children: [
-                      //     MainInfo(
-                      //         title: "rooms".tr,
-                      //         num: 3,
-                      //         icon: Icons.bed_outlined),
-                      //     MainInfo(
-                      //         title: "space".tr,
-                      //         num: 222,
-                      //         icon: Icons.space_bar_outlined)
-                      //   ],
-                      // ),
+                    
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -198,7 +204,7 @@ class PlaceInfo extends StatelessWidget {
                       MyDivider(),
                       SizedBox(height: 20.h),
                       const Info(
-                        title: "additipnal info",
+                        title: "additional info",
                         info:
                             "Simple home with modern architecture and up to-date"
                             " interior located in the ciy center makes it easy for you to access whole city.",
