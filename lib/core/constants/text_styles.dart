@@ -7,8 +7,6 @@ class TextStyles {
     return TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold);
   }
 
-  
-
   static TextStyle bold17(BuildContext context) => _getCustomTextStyle(17.sp);
   static TextStyle w50019(BuildContext context) => _getCustomTextStyle(19.sp);
   static TextStyle bold20(BuildContext context) => _getCustomTextStyle(20.sp);
@@ -36,7 +34,7 @@ class TextStyles {
       color: Colors.grey[700], fontSize: 13.sp, fontWeight: FontWeight.w500);
   static TextStyle w40014grey(BuildContext context) => TextStyle(
       color: Colors.grey[700], fontSize: 14.sp, fontWeight: FontWeight.w500);
-       
+
   static TextStyle w50015grey(BuildContext context) => TextStyle(
       color: Colors.grey[700], fontSize: 14.sp, fontWeight: FontWeight.w500);
 
@@ -45,6 +43,10 @@ class TextStyles {
         fontSize: 10.sp,
         fontWeight: FontWeight.w400,
       );
+  static TextStyle w40013green(BuildContext context) => TextStyle(
+      color: LightAppColors.greenColor,
+      fontSize: 13.sp,
+      fontWeight: FontWeight.w500);
 
   static TextStyle w50012White(BuildContext context) => TextStyle(
         color: Colors.white,
@@ -68,18 +70,17 @@ class TextStyles {
         fontWeight: FontWeight.w500,
         color: LightAppColors.whiteColor,
       );
-       static TextStyle w50011blue(BuildContext context) => TextStyle(
+  static TextStyle w50011blue(BuildContext context) => TextStyle(
         fontSize: 11.sp,
         fontWeight: FontWeight.w500,
-        color:Colors.blue,
+        color: Colors.blue,
       );
-        static TextStyle bold24(BuildContext context) => TextStyle(
+  static TextStyle bold24(BuildContext context) => TextStyle(
         fontSize: 24.sp,
         fontWeight: FontWeight.bold,
       );
-       static TextStyle bold30(BuildContext context) => TextStyle(
+  static TextStyle bold30(BuildContext context) => TextStyle(
         fontSize: 30.sp,
         fontWeight: FontWeight.bold,
       );
-
 }

@@ -19,6 +19,7 @@ class AppTheme {
 //     surface: Color.fromARGB(255, 52, 50, 50),
       surface: Colors.black.withOpacity(0.2),
       onSurface: Color(0xFFF3F3F3),
+      secondaryContainer:DarkAppColors.whiteColor ,
       onBackground: Colors.black.withOpacity(0.3)
 //     surfaceVariant: Color.fromARGB(255, 222, 52, 30),
 //     //for chips after picking
@@ -42,7 +43,7 @@ class AppTheme {
     primary: LightAppColors.primaryColor,
     primaryContainer: LightAppColors.whiteColor,
     onSecondary: Colors.black,
-    secondaryContainer: Color.fromARGB(228, 233, 221, 221),
+    secondaryContainer:Color.fromARGB(255, 228, 231, 237),
 
     // onPrimaryContainer: lightAppColors.blackColor,
     background: LightAppColors.backGround,

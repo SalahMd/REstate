@@ -19,7 +19,7 @@ class MainInfo extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 15.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color.fromARGB(255, 228, 231, 237),
+          color: Theme.of(context).colorScheme.secondaryContainer,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
