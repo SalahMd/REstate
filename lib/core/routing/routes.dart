@@ -7,4 +7,5 @@ class Routes{
   static const String changeLanguage = '/changeLanguage';
   static const String changeMode = '/changeMode';
   static const String placeInfo = '/placeInfo';
+  static const String addPlace = '/addPlace';
 }
