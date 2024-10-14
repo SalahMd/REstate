@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:restate/buisness_logic/cubit/add_place_cubit.dart';
 import 'package:restate/core/routing/routes.dart';
 import 'package:restate/view/screens/auth/login/login.dart';
 import 'package:restate/view/screens/auth/sign_up/sign_up.dart';
 import 'package:restate/view/screens/nav_bar.dart';
 import 'package:restate/view/screens/onboarding/onboarding.dart';
+import 'package:restate/view/screens/place_info/add_place.dart';
 import 'package:restate/view/screens/place_info/item_info.dart';
 import 'package:restate/view/screens/settings/change_language.dart';
 import 'package:restate/view/screens/settings/dark_mode.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
@@ -30,6 +32,11 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => DarkMode());
       case Routes.placeInfo:
         return MaterialPageRoute(builder: (_) => PlaceInfo());
+      case Routes.addPlace:
+        return MaterialPageRoute(builder:  (_) => BlocProvider(
+          create: (context) => AddPlaceCubit(),
+          child: AddPlace(),
+        ));
       default:
         return null;
     }
