@@ -4,6 +4,8 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/colors.dart';
 import 'package:restate/core/constants/text_styles.dart';
+import 'package:restate/core/helpers/extensions.dart';
+import 'package:restate/core/routing/routes.dart';
 import 'package:restate/view/screens/auth/login/login.dart';
 import 'package:restate/view/screens/home/home_page.dart';
 import 'package:restate/view/screens/settings/settings.dart';
@@ -57,7 +59,9 @@ class _ButtomBarState extends State<ButtomBar> {
               ),
             ),
             shape: const CircleBorder(),
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.addPlace);
+            },
             child: Icon(Icons.task_outlined,
                 size: 18.sp, color: LightAppColors.whiteColor),
           ),
