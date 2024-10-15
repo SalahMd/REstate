@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:restate/buisness_logic/cubit/add_place_cubit.dart';
 import 'package:restate/core/constants/text_styles.dart';
 
 
@@ -40,7 +42,7 @@ class DropDownWidget extends StatelessWidget {
               icon: const Icon(Icons.arrow_downward),
               elevation: 16,
               onChanged: (String? value) {
-             //   controller.updateDropDownValue(value, title);
+                context.read<AddPlaceCubit>().updateDropDownValue(value, title);
               },
               items: choices,
             ),

@@ -5,7 +5,7 @@ import 'package:restate/view/screens/auth/login/login.dart';
 import 'package:restate/view/screens/auth/sign_up/sign_up.dart';
 import 'package:restate/view/screens/nav_bar.dart';
 import 'package:restate/view/screens/onboarding/onboarding.dart';
-import 'package:restate/view/screens/place_info/add_place.dart';
+import 'package:restate/view/screens/add_place/add_place.dart';
 import 'package:restate/view/screens/place_info/item_info.dart';
 import 'package:restate/view/screens/settings/change_language.dart';
 import 'package:restate/view/screens/settings/dark_mode.dart';

@@ -4,17 +4,51 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/text_styles.dart';
 
-
-class RoomWidgets extends StatelessWidget {
+class RoomWidgets extends StatefulWidget {
   final String title;
-  final int numOfRooms;
   final IconData icon;
-  const RoomWidgets(
-      {super.key,
-      required this.title,
-      required this.numOfRooms,
-      required this.icon,
-      });
+  const RoomWidgets({super.key, required this.title, required this.icon});
+
+  @override
+  State<RoomWidgets> createState() =>
+      _RoomWidgetsState(title: title, icon: icon);
+}
+
+class _RoomWidgetsState extends State<RoomWidgets> {
+  final String title;
+  final IconData icon;
+  int rentalTerm = 0, numOfBathRooms = 0, numOfKitchens = 0, numOfRooms = 0;
+  _RoomWidgetsState({
+    required this.title,
+    required this.icon,
+  });
+  decreaseCount() {
+    setState(() {
+      if (title == "bathrooms" && numOfBathRooms > 0) {
+        numOfBathRooms--;
+      } else if (title == "kitchens" && numOfKitchens > 0) {
+        numOfKitchens--;
+      } else if (title == "rooms" && numOfRooms > 0) {
+        numOfRooms--;
+      } else if (title == "rentalterm" && rentalTerm > 0) {
+        rentalTerm--;
+      }
+    });
+  }
+
+  increaseCount() {
+    setState(() {
+      if (title == "bathrooms" && numOfBathRooms >= 0) {
+        numOfBathRooms++;
+      } else if (title == "kitchens" && numOfKitchens >= 0) {
+        numOfKitchens++;
+      } else if (title == "rooms" && numOfRooms >= 0) {
+        numOfRooms++;
+      } else if (title == "rentalterm" && rentalTerm >= 0) {
+        rentalTerm++;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,15 +74,13 @@ class RoomWidgets extends StatelessWidget {
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             Icon(icon),
-            Text(
-              numOfRooms.toString(),
-            ),
+            Text(numOfRooms.toString()),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   onTap: () {
-                  //  controller.increaseCount(title);
+                    increaseCount();
                   },
                   child: const Icon(
                     Icons.arrow_upward_outlined,
@@ -57,7 +89,7 @@ class RoomWidgets extends StatelessWidget {
                 ),
                 GestureDetector(
                     onTap: () {
-                      //controller.decreaseCount(title);
+                      decreaseCount();
                     },
                     child: const Icon(Icons.arrow_downward_outlined, size: 20))
               ],
