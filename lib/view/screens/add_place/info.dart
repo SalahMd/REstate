@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:restate/core/constants/text_styles.dart';
 import 'package:restate/core/functions/dimenesions.dart';
 
 class Info extends StatelessWidget {
-  const Info({super.key});
+  final String title;
+  const Info({super.key, required this.title});
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
+          padding:  EdgeInsetsDirectional.symmetric(horizontal: 10.w),
           child: Align(
             alignment: AlignmentDirectional.centerStart,
             child: Text(
-              "additional".tr,
+              title,
               style: TextStyles.bold14(context),
             ),
           ),

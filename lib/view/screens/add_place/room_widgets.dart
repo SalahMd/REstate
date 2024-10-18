@@ -50,6 +50,20 @@ class _RoomWidgetsState extends State<RoomWidgets> {
     });
   }
 
+  String numText() {
+    int num = 0;
+    if (title == "bathrooms") {
+      num = numOfBathRooms;
+    } else if (title == "kitchens") {
+      num = numOfKitchens;
+    } else if (title == "rooms") {
+      num = numOfRooms;
+    } else if (title == "rentalterm") {
+      num = rentalTerm;
+    }
+    return num.toString();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -74,7 +88,7 @@ class _RoomWidgetsState extends State<RoomWidgets> {
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             Icon(icon),
-            Text(numOfRooms.toString()),
+            Text(numText()),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

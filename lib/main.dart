@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -17,8 +18,15 @@ void main() async {
   runApp(MyApp(
     appRouter: AppRouter(),
   ));
+  getFCMToken();
 }
-
+  getFCMToken() async {
+    String? FCMToken;
+    FirebaseMessaging.instance.getToken().then((value) {
+      FCMToken = value;
+      print("token is" + FCMToken!);
+    });
+  }
 class MyApp extends StatelessWidget {
   final AppRouter appRouter;
 
