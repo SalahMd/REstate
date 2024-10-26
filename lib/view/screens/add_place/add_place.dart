@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:restate/buisness_logic/cubit/add_place_cubit.dart';
 import 'package:restate/core/constants/buttons.dart';
 import 'package:restate/core/constants/text_styles.dart';
 import 'package:restate/core/functions/dimenesions.dart';
 import 'package:restate/view/screens/add_place/add_images.dart';
+import 'package:restate/view/screens/add_place/info.dart';
 import 'package:restate/view/screens/add_place/main_info.dart';
 import 'package:restate/view/widgets/divider.dart';
 
@@ -29,28 +28,35 @@ class _AddPlaceState extends State<AddPlace> {
         SizedBox(
           height: 20.h,
         ),
+        // SafeArea(
+        //   child: Text(
+        //     "addplace".tr,
+        //     style: TextStyles.bold17(context),
+        //   ),
+        // ),
+
         SafeArea(
-          child: Text(
-            "addplace".tr,
-            style: TextStyles.bold17(context),
-          ),
+          child: Padding(
+            padding: EdgeInsetsDirectional.only(start: 10.w),
+            child: Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text("fillyourplaceinfo".tr,
+                    style: TextStyles.w50018(context))),
+          ).animate().fade(duration: 1000.ms).saturate(),
         ),
-        SizedBox(
-          height: 50.h,
-        ),
-        Padding(
-          padding: EdgeInsetsDirectional.only(start: 10.w),
-          child: Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: Text("fillyourplaceinfo".tr,
-                  style: TextStyles.w50018(context))),
-        ).animate().fade(duration: 1000.ms).saturate(),
-        SizedBox(height: 20.h),
         //           RentOrSaleChooser(
         // controller: controller,
         //           ).animate().fade(duration: 1000.ms).saturate(),
         SizedBox(height: 20.h),
         MainInfo(),
+        Info(
+          title: 'description'.tr,
+        ),
+        MyDivider(),
+        Info(
+          title: 'additional information'.tr,
+        ),
+        MyDivider(),
         Padding(
           padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
           child: Align(
@@ -85,6 +91,7 @@ class _AddPlaceState extends State<AddPlace> {
         //   .animate()
         //  .fade(duration: (600.ms))
         // .slideY(begin: -0.5),
+
         GestureDetector(
           onTap: () {},
           child: Container(

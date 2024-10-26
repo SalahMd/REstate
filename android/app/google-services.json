@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "401503705268",
+    "project_id": "restate-cf11b",
+    "storage_bucket": "restate-cf11b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401503705268:android:e311c2c2191bd20b4e1fe1",
+        "android_client_info": {
+          "package_name": "com.example.restate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFHYHy1cZEsKGtYNO6PvSvogKy7Ol7ZgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
