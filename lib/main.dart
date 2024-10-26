@@ -2,6 +2,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:restate/core/functions/notification_permission.dart';
 import 'package:restate/core/localization/change_language.dart';
 import 'package:restate/core/localization/translation.dart';
 import 'package:restate/core/routing/app_routing.dart';
@@ -14,19 +15,22 @@ import 'package:restate/view/screens/choose_language.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialServices();
+  getNotificationPermession();
   getLang();
   runApp(MyApp(
     appRouter: AppRouter(),
   ));
   getFCMToken();
 }
-  getFCMToken() async {
-    String? FCMToken;
-    FirebaseMessaging.instance.getToken().then((value) {
-      FCMToken = value;
-      print("token is" + FCMToken!);
-    });
-  }
+
+getFCMToken() async {
+  String? FCMToken;
+  FirebaseMessaging.instance.getToken().then((value) {
+    FCMToken = value;
+    print("token is" + FCMToken!);
+  });
+}
+
 class MyApp extends StatelessWidget {
   final AppRouter appRouter;
 
