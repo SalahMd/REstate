@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/buttons.dart';
@@ -8,6 +9,7 @@ import 'package:restate/core/constants/text_styles.dart';
 import 'package:restate/core/functions/dimenesions.dart';
 import 'package:restate/core/helpers/extensions.dart';
 import 'package:restate/core/routing/routes.dart';
+import 'package:restate/view/auth/login/logic/cubit/login_cubit.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -16,6 +18,25 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  @override
+  void initState() {
+    BlocProvider.of<LoginCubit>(context).getFCMToken();
+    super.initState();
+  }
+
+  Widget buildBlocWidget() {
+    return BlocBuilder<LoginCubit, LoginState>(builder: (context, state) {
+      if (state is LoginLoading) {
+//       return build(context);
+      } else if (state is LoginOffline) {
+        //return buildNoInternet(context);
+      } else {
+        //return buildFail(context);
+      }
+      return build(context);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +76,7 @@ class _LoginState extends State<Login> {
                 hintText: "phone2".tr,
                 labelText: '',
                 iconData: Icons.phone_outlined,
-                controller: null,
+                controller: context.read<LoginCubit>().phoneNumber,
                 min: 10,
                 max: 10,
                 isNumber: true,
@@ -67,7 +88,7 @@ class _LoginState extends State<Login> {
                 hintText: "password2".tr,
                 labelText: '',
                 iconData: Icons.remove_red_eye_outlined,
-                controller: null,
+                controller: context.read<LoginCubit>().password,
                 min: 8,
                 max: 18,
                 isNumber: false,
