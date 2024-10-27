@@ -6,9 +6,9 @@ import 'package:restate/core/constants/colors.dart';
 import 'package:restate/core/constants/images.dart';
 import 'package:restate/core/constants/text_styles.dart';
 import 'package:restate/core/functions/dimenesions.dart';
-import 'package:restate/view/screens/place_info/info.dart';
-import 'package:restate/view/screens/place_info/image_view.dart';
-import 'package:restate/view/screens/place_info/main_info.dart';
+import 'package:restate/view/place_info/info.dart';
+import 'package:restate/view/place_info/image_view.dart';
+import 'package:restate/view/place_info/main_info.dart';
 import 'package:restate/view/widgets/divider.dart';
 
 // ignore: must_be_immutable

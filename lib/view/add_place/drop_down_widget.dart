@@ -3,8 +3,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:restate/buisness_logic/cubit/add_place_cubit.dart';
 import 'package:restate/core/constants/text_styles.dart';
+import 'package:restate/view/add_place/logic/cubit/add_place_cubit.dart';
 
 
 // ignore: must_be_immutable

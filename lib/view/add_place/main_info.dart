@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/custom_text_form_filed.dart';
 import 'package:restate/core/constants/text_styles.dart';
-import 'package:restate/view/screens/add_place/room_widgets.dart';
-import 'package:restate/view/screens/auth/sign_up/drop_down.dart';
+import 'package:restate/view/add_place/room_widgets.dart';
+import 'package:restate/view/auth/sign_up/drop_down.dart';
 import 'package:restate/view/widgets/divider.dart';
 
 class MainInfo extends StatelessWidget {

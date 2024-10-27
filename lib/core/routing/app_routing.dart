@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:restate/buisness_logic/cubit/add_place_cubit.dart';
 import 'package:restate/core/routing/routes.dart';
-import 'package:restate/view/screens/auth/login/login.dart';
-import 'package:restate/view/screens/auth/sign_up/sign_up.dart';
-import 'package:restate/view/screens/nav_bar.dart';
-import 'package:restate/view/screens/onboarding/onboarding.dart';
-import 'package:restate/view/screens/add_place/add_place.dart';
-import 'package:restate/view/screens/place_info/item_info.dart';
-import 'package:restate/view/screens/settings/change_language.dart';
-import 'package:restate/view/screens/settings/dark_mode.dart';
+import 'package:restate/view/add_place/logic/cubit/add_place_cubit.dart';
+import 'package:restate/view/auth/login/login.dart';
+import 'package:restate/view/auth/sign_up/sign_up.dart';
+import 'package:restate/view/nav_bar.dart';
+import 'package:restate/view/onboarding/onboarding.dart';
+import 'package:restate/view/add_place/add_place.dart';
+import 'package:restate/view/place_info/item_info.dart';
+import 'package:restate/view/settings/change_language.dart';
+import 'package:restate/view/settings/dark_mode.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {

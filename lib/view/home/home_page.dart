@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/images.dart';
 import 'package:restate/core/constants/text_styles.dart';
-import 'package:restate/view/screens/home/categories.dart';
-import 'package:restate/view/screens/home/top_bar.dart';
+import 'package:restate/view/home/categories.dart';
+import 'package:restate/view/home/top_bar.dart';
 import 'package:restate/view/widgets/place_widget.dart';
 
 class HomePage extends StatelessWidget {

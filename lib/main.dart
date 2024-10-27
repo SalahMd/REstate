@@ -10,7 +10,7 @@ import 'package:restate/core/routing/routes.dart';
 import 'package:restate/core/services/shared_pref.dart';
 import 'package:restate/core/themes/app_theme.dart';
 import 'package:restate/core/themes/dark_mode.dart';
-import 'package:restate/view/screens/choose_language.dart';
+import 'package:restate/view/choose_language.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

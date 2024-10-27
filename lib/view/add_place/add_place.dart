@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import 'package:restate/core/constants/buttons.dart';
 import 'package:restate/core/constants/text_styles.dart';
 import 'package:restate/core/functions/dimenesions.dart';
-import 'package:restate/view/screens/add_place/add_images.dart';
-import 'package:restate/view/screens/add_place/info.dart';
-import 'package:restate/view/screens/add_place/main_info.dart';
+import 'package:restate/view/add_place/add_images.dart';
+import 'package:restate/view/add_place/info.dart';
+import 'package:restate/view/add_place/main_info.dart';
 import 'package:restate/view/widgets/divider.dart';
 
 class AddPlace extends StatefulWidget {
