@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/buttons.dart';
 import 'package:restate/core/constants/text_styles.dart';
-import 'package:restate/view/auth/sign_up/fields.dart';
+import 'package:restate/view/auth/sign_up/presentation/fields.dart';
 
-import '../../../core/functions/dimenesions.dart';
+import '../../../../core/functions/dimenesions.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});

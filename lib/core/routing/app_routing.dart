@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restate/core/routing/routes.dart';
 import 'package:restate/view/add_place/logic/cubit/add_place_cubit.dart';
 import 'package:restate/view/auth/login/presentation/login.dart';
-import 'package:restate/view/auth/sign_up/sign_up.dart';
+import 'package:restate/view/auth/sign_up/presentation/sign_up.dart';
 import 'package:restate/view/nav_bar.dart';
 import 'package:restate/view/onboarding/onboarding.dart';
 import 'package:restate/view/add_place/add_place.dart';

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restate/core/constants/custom_text_form_filed.dart';
 import 'package:restate/core/constants/text_styles.dart';
-import 'package:restate/view/auth/sign_up/drop_down.dart';
+import 'package:restate/view/auth/sign_up/logic/cubit/sign_up_cubit.dart';
+import 'package:restate/view/auth/sign_up/presentation/drop_down.dart';
 
 class Fields extends StatefulWidget {
   const Fields({super.key});
@@ -21,7 +23,7 @@ class _FieldsState extends State<Fields> {
             hintText: 'firstname2'.tr,
             labelText: '',
             iconData: Icons.person_outline,
-            controller: null,
+            controller: context.read<SignUpCubit>().firstName,
             min: 3,
             max: 12,
             isNumber: false,
@@ -31,7 +33,7 @@ class _FieldsState extends State<Fields> {
             hintText: 'lastname2'.tr,
             labelText: '',
             iconData: Icons.person_outline,
-            controller: null,
+            controller: context.read<SignUpCubit>().lastName,
             min: 3,
             max: 12,
             isNumber: false,
@@ -41,7 +43,7 @@ class _FieldsState extends State<Fields> {
             hintText: 'phone2'.tr,
             labelText: '',
             iconData: Icons.phone_outlined,
-            controller: null,
+            controller: context.read<SignUpCubit>().phoneNumber,
             min: 10,
             max: 10,
             isNumber: true,
@@ -51,7 +53,7 @@ class _FieldsState extends State<Fields> {
             hintText: 'password2'.tr,
             labelText: '',
             iconData: Icons.remove_red_eye_outlined,
-            controller: null,
+            controller: context.read<SignUpCubit>().password,
             min: 8,
             max: 18,
             isNumber: false,
@@ -61,7 +63,7 @@ class _FieldsState extends State<Fields> {
             hintText: 'confirmpassword2'.tr,
             labelText: '',
             iconData: Icons.remove_red_eye_outlined,
-            controller: null,
+            controller: context.read<SignUpCubit>().confirmPassword,
             min: 8,
             max: 18,
             isNumber: false,

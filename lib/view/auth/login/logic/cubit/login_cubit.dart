@@ -10,19 +10,19 @@ part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   RequestStatus? statusRequest;
-  final LoginRepo transfareRepo;
+  final LoginRepo loginRepo;
   String deviceToken = "";
   TextEditingController phoneNumber = TextEditingController();
   TextEditingController password = TextEditingController();
   GlobalKey<FormState> formState = GlobalKey<FormState>();
 
-  LoginCubit(this.transfareRepo) : super(LoginInitial());
+  LoginCubit(this.loginRepo) : super(LoginInitial());
 
   void login() async {
     var formdata = formState.currentState;
     if (formdata!.validate()) {
       emit(LoginLoading());
-      var response = await transfareRepo.getAllTransfers({
+      var response = await loginRepo.login({
         "phone_number": phoneNumber.text,
         "password": password.text,
         "device_token": deviceToken
